@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Studio | Build your next opportunity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">R</span><span>resume<span class="brand-light">studio</span></span></a>
+    <nav>
+      <button class="nav-btn active" id="builderTab">Builder</button>
+      <button class="nav-btn" id="savedTab">My resumes <span id="resumeCount" class="count">0</span></button>
+    </nav>
+    <span class="top-note"><span class="status-dot"></span> Your work is stored locally</span>
+  </header>
+
+  <main class="page">
+    <section id="builderView">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">YOUR CAREER, WELL PRESENTED</p>
+          <h1>Build a resume that<br><span>opens doors.</span></h1>
+          <p class="hero-copy">Add your details, choose a style and create a polished resume in minutes.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="art-sheet"><i></i><i></i><i></i><b></b><b></b><b></b></div><div class="art-star">✦</div></div>
+      </div>
+
+      <div class="workspace">
+        <section class="editor panel">
+          <div class="section-heading"><div><p class="eyebrow">RESUME EDITOR</p><h2>Your information</h2></div><span class="step-pill">01 / 02</span></div>
+          <form id="resumeForm">
+            <label>Resume title<input id="title" placeholder="e.g. Software Developer Resume"></label>
+            <div class="form-grid">
+              <label>Full name<input id="name" required placeholder="Your full name"></label>
+              <label>Email address<input id="email" type="email" placeholder="you@example.com"></label>
+              <label>Phone number<input id="phone" placeholder="+91 98765 43210"></label>
+              <label>Location<input id="location" placeholder="Dehradun, India"></label>
+            </div>
+            <label>Professional summary<textarea id="summary" rows="3" placeholder="Write 2–3 lines about your strengths and career goals..."></textarea></label>
+            <label>Skills <span class="hint">Separate skills with commas</span><textarea id="skills" rows="2" placeholder="JavaScript, HTML, CSS, communication..."></textarea></label>
+            <label>Education<textarea id="education" rows="3" placeholder="Degree — College / University&#10;Year | CGPA / Percentage"></textarea></label>
+            <label>Experience<textarea id="experience" rows="3" placeholder="Job title — Company&#10;Dates&#10;Describe your responsibilities and achievements..."></textarea></label>
+            <label>Projects<textarea id="projects" rows="3" placeholder="Project name — Technologies used&#10;Briefly describe what you built..."></textarea></label>
+            <div class="form-actions">
+              <button type="button" class="btn btn-primary" id="saveBtn">Save resume <span>↗</span></button>
+              <button type="button" class="btn btn-ghost" id="newBtn">Clear form</button>
+            </div>
+            <p id="message" class="message" role="status"></p>
+          </form>
+        </section>
+
+        <section class="preview-column">
+          <div class="preview-toolbar">
+            <div><p class="eyebrow">LIVE PREVIEW</p><h2>Looking good?</h2></div>
+            <select id="template" aria-label="Choose resume template">
+              <option value="modern">Modern</option>
+              <option value="classic">Classic</option>
+              <option value="minimal">Minimal</option>
+            </select>
+          </div>
+          <article id="resumePreview" class="resume-paper modern">
+            <div class="resume-header"><h2 id="pName">Your Name</h2><p id="pContact">Email · Phone · Location</p></div>
+            <section class="resume-section" id="summarySection"><h3>Profile</h3><p id="pSummary">Your professional summary will appear here.</p></section>
+            <section class="resume-section" id="skillsSection"><h3>Skills</h3><div id="pSkills" class="skill-list"><span class="skill">Your skills</span></div></section>
+            <section class="resume-section" id="educationSection"><h3>Education</h3><p id="pEducation">Your education details will appear here.</p></section>
+            <section class="resume-section" id="experienceSection"><h3>Experience</h3><p id="pExperience">Your experience will appear here.</p></section>
+            <section class="resume-section" id="projectsSection"><h3>Projects</h3><p id="pProjects">Your projects will appear here.</p></section>
+          </article>
+          <div class="preview-actions"><span class="preview-tip">Preview updates as you type</span><button class="btn btn-dark" id="downloadBtn">Download / Print PDF ↓</button></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="savedView" class="hidden">
+      <div class="saved-heading"><div><p class="eyebrow">YOUR WORKSPACE</p><h1>My <span>resumes.</span></h1><p class="hero-copy">Open, edit, duplicate or delete a saved resume.</p></div><button class="btn btn-primary" id="createNewBtn">＋ Create new</button></div>
+      <div id="savedList" class="saved-grid"></div>
+      <div id="emptyState" class="empty-state"><div class="empty-icon">▤</div><h2>No saved resumes yet</h2><p>Your saved resumes will appear here. Create one to get started.</p><button class="btn btn-primary" id="emptyCreateBtn">Create your first resume</button></div>
+    </section>
+  </main>
+  <footer>Resume Studio <span>•</span> Built with HTML, CSS, JavaScript, Node.js & Express</footer>
+  <script src="app.js"></script>
+</body>
+</html>

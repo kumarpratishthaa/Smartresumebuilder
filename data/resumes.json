@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ffa5f17d-1700-4ac3-b300-338a811d4343",
+    "title": "Front-End Developer Resume",
+    "name": "Pratishthaa Kumar",
+    "email": "kumarpratishthaa@gmail.com",
+    "phone": "9352156415",
+    "location": "Mumbai, Maharashtra",
+    "summary": "I am Btech 3rd year student, Currently studying in DIT University. I have completed my schooling from AECE-3 Mumbai and kv school. \nI aspire to get placed at. a very good tech company, and I really aim for a government job.",
+    "skills": "Javascript, HTML, CSS",
+    "education": "BTECH- DIT University\nSchool- Senior Secondary School- Kendriya Vidyalaya\nSecondary School- AECS-3 Mumbai",
+    "experience": "Summer Intenship- IIT, Roorkee - 2025 (May- July)",
+    "projects": "Resume builder with template switching using node.js express and json files.",
+    "template": "minimal",
+    "createdAt": "2026-11-19T10:08:36.651Z",
+    "updatedAt": "2026-11-19T10:32:34.962Z"
+  }
+]
